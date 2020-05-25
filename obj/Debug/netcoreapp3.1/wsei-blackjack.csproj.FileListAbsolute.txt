@@ -1,0 +1,13 @@
+C:\Users\Berry\Desktop\c#\wsei-blackjack\bin\Debug\netcoreapp3.1\wsei-blackjack.exe
+C:\Users\Berry\Desktop\c#\wsei-blackjack\bin\Debug\netcoreapp3.1\wsei-blackjack.deps.json
+C:\Users\Berry\Desktop\c#\wsei-blackjack\bin\Debug\netcoreapp3.1\wsei-blackjack.runtimeconfig.json
+C:\Users\Berry\Desktop\c#\wsei-blackjack\bin\Debug\netcoreapp3.1\wsei-blackjack.runtimeconfig.dev.json
+C:\Users\Berry\Desktop\c#\wsei-blackjack\bin\Debug\netcoreapp3.1\wsei-blackjack.dll
+C:\Users\Berry\Desktop\c#\wsei-blackjack\bin\Debug\netcoreapp3.1\wsei-blackjack.pdb
+C:\Users\Berry\Desktop\c#\wsei-blackjack\obj\Debug\netcoreapp3.1\wsei-blackjack.csprojAssemblyReference.cache
+C:\Users\Berry\Desktop\c#\wsei-blackjack\obj\Debug\netcoreapp3.1\wsei-blackjack.csproj.CoreCompileInputs.cache
+C:\Users\Berry\Desktop\c#\wsei-blackjack\obj\Debug\netcoreapp3.1\wsei-blackjack.AssemblyInfoInputs.cache
+C:\Users\Berry\Desktop\c#\wsei-blackjack\obj\Debug\netcoreapp3.1\wsei-blackjack.AssemblyInfo.cs
+C:\Users\Berry\Desktop\c#\wsei-blackjack\obj\Debug\netcoreapp3.1\wsei-blackjack.dll
+C:\Users\Berry\Desktop\c#\wsei-blackjack\obj\Debug\netcoreapp3.1\wsei-blackjack.pdb
+C:\Users\Berry\Desktop\c#\wsei-blackjack\obj\Debug\netcoreapp3.1\wsei-blackjack.genruntimeconfig.cache
