@@ -29,6 +29,7 @@ namespace wsei_blackjack
                     {
                         case 1:
                             Console.WriteLine("odpalenie gry");
+                            Game blackjack = new Game();
                             break;
                         case 2:
                             return;
