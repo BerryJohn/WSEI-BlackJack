@@ -1,8 +1,20 @@
 using System;
 using System.Collections.Generic;
 
+
 public class Player
 {
+    // 1 -> Heart
+    // 2 -> Diamond
+    // 3 -> Spade
+    // 4 -> Clubs
+    public enum Suit
+    {
+        Heart = 1,
+        Diamond,
+        Spade,
+        Club
+    }
     public int Points = 0;
     public List<string> Hand = new List<string>();
 
@@ -26,25 +38,49 @@ public class Player
         }
         return handPoints;
     }
+
+    public void WriteHandPoints()
+    {
+        int i = 1;
+        Console.WriteLine("----------------------");
+        foreach (string card in Hand)
+        {
+            Console.WriteLine($"{i++} -> {card}");
+        }
+        Console.WriteLine($"Points: { CountPoints(Hand) }");
+        Console.WriteLine("----------------------");
+    }
     public void TakeCard(List<string> deck)
     {
-        Random random = new Random();
-        int ran = random.Next(0, deck.Count - 1);
-        string card = deck[ran];
+        if (Points < 21)
+        {
+            Random random = new Random();
+            int ran = random.Next(0, deck.Count - 1);
+            string card = deck[ran];
 
-        Hand.Add(card); // adding card to player hand
-        deck.Remove(card); // removing from deck
-        Points = CountPoints(Hand);
+            Hand.Add(card); // adding card to player hand
+            deck.Remove(card); // removing from deck
+            Points = CountPoints(Hand);
+        }
     }
 
     private string DrawCard(string suit, string figure)
     {
-        string card =
-        $"*****\n" +
-        $"*  {suit}*\n" +
-        $"* {figure} *\n" +
-        $"*{suit}  *\n" +
-        $"*****";
+        string card;
+        if (figure != "10")
+            card =
+                $"*****\n" +
+                $"*  {suit}*\n" +
+                $"* {figure} *\n" +
+                $"*{suit}  *\n" +
+                $"*****";
+        else
+            card =
+                $"*****\n" +
+                $"*  {suit}*\n" +
+                $"* {figure}*\n" +
+                $"*{suit}  *\n" +
+                $"*****";
         return card;
     }
     public void DrawHand()
@@ -52,24 +88,23 @@ public class Player
         foreach (string card in Hand)
         {
             string[] cardInfo = card.Split();
-            var Suits = Cards.Suit;
-            // switch (int.Parse(cardInfo[1]))
-            // {
-            //     case int.Parse(Cards.Suit.Heart):
-            //         cardInfo[1] = '♥';
-            //         break;
-            //     case Cards.Suit.Diamond:
-            //         cardInfo[1] = '♦';
-            //         break;
-            //     case Cards.Suit.Spade:
-            //         cardInfo[1] = '♠';
-            //         break;
-            //     case Cards.Suit.Club:
-            //         cardInfo[1] = '♣';
-            //         break;
 
-            // }
+            switch (int.Parse(cardInfo[1]))
+            {
+                case (int)Suit.Heart:
+                    cardInfo[1] = "H";
+                    break;
+                case (int)Suit.Diamond:
+                    cardInfo[1] = "D";
+                    break;
+                case (int)Suit.Spade:
+                    cardInfo[1] = "S";
+                    break;
+                case (int)Suit.Club:
+                    cardInfo[1] = "C";
+                    break;
 
+            }
             Console.WriteLine(
                 DrawCard(
                     cardInfo[1], // Card suit 

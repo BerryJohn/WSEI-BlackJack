@@ -6,18 +6,6 @@ public class Cards
     //  <string> <number> <number>
     //  ex: Two 1 2
     //  Card: Two, Type: Heart, Value: 2
-
-    // 1 -> Heart
-    // 2 -> Diamond
-    // 3 -> Spade
-    // 4 -> Clubs
-    public enum Suit
-    {
-        Heart,
-        Diamond,
-        Spade,
-        Clubs
-    }
     public List<string> AllCards = new List<string>()
     {
         {"Two 1 2"},

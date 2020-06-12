@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace wsei_blackjack
 {
     class Program
@@ -7,7 +8,6 @@ namespace wsei_blackjack
         static void Main(string[] args)
         {
             int menuChoice = 1;
-
 
             while (true)
             {
@@ -28,7 +28,6 @@ namespace wsei_blackjack
                     switch (menuChoice)
                     {
                         case 1:
-                            Console.WriteLine("odpalenie gry");
                             Game blackjack = new Game();
                             break;
                         case 2:
@@ -44,19 +43,19 @@ namespace wsei_blackjack
         static void Menu(int choice)
         {
             Console.Clear();
-            Console.WriteLine("Witaj w grze Blackjack!");
+            Console.WriteLine("Welcome to Blackjack!");
             switch (choice)
             {
                 case 1:
                     Console.BackgroundColor = ConsoleColor.DarkGray;
-                    Console.WriteLine("1.Rozpocznij grę");
+                    Console.WriteLine("1.Start game");
                     Console.ResetColor();
-                    Console.WriteLine("2. Wyjdź");
+                    Console.WriteLine("2.Quit");
                     break;
                 case 2:
-                    Console.WriteLine("1.Rozpocznij grę");
+                    Console.WriteLine("1.Start game");
                     Console.BackgroundColor = ConsoleColor.DarkGray;
-                    Console.WriteLine("2. Wyjdź");
+                    Console.WriteLine("2.Quit");
                     Console.ResetColor();
                     break;
                 default:
