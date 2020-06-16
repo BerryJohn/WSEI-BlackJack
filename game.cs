@@ -57,7 +57,8 @@ public class Game
             {
                 if (player.Hand.Count == 2 && CheckBJ(player))
                     guard = false;
-                player.TakeCard(deck);
+                else
+                    player.TakeCard(deck);
             }
             else if (menuOption == 2)
                 guard = false;

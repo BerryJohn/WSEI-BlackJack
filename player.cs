@@ -24,7 +24,7 @@ public class Player
         return int.Parse(cardTab[2]); // returning card points  
     }
 
-    public int CountPoints(List<string> Hand)
+    public int CountPoints(List<string> Hand) // counting points from player hands
     {
         Hand.Sort((x, y) => (-1) * x.CompareTo(y));  // sorting hand to check how value must be ace
         int handPoints = 0;
@@ -39,7 +39,7 @@ public class Player
         return handPoints;
     }
 
-    public void WriteHandPoints()
+    public void WriteHandPoints() // Summary points
     {
         int i = 1;
         Console.WriteLine("----------------------");
@@ -50,7 +50,7 @@ public class Player
         Console.WriteLine($"Points: { CountPoints(Hand) }");
         Console.WriteLine("----------------------");
     }
-    public void TakeCard(List<string> deck)
+    public void TakeCard(List<string> deck) // taking card from deck
     {
         if (Points < 21)
         {
@@ -64,7 +64,7 @@ public class Player
         }
     }
 
-    private string DrawCard(string suit, string figure)
+    private string DrawCard(string suit, string figure)  // function to drawing cards
     {
         string card;
         if (figure != "10")
@@ -88,7 +88,6 @@ public class Player
         foreach (string card in Hand)
         {
             string[] cardInfo = card.Split();
-
             switch (int.Parse(cardInfo[1]))
             {
                 case (int)Suit.Heart:
@@ -103,16 +102,12 @@ public class Player
                 case (int)Suit.Club:
                     cardInfo[1] = "C";
                     break;
-
             }
             Console.WriteLine(
                 DrawCard(
                     cardInfo[1], // Card suit 
                     cardInfo[2] // card face
-                    )
-                );
+                    ));
         }
     }
-
-
 }
